@@ -9,11 +9,14 @@ export const zh = defineConfig({
   description: '由 Vite 和 Vue 驱动的静态站点生成器',
 
   themeConfig: {
+    logo: '/vitepress-logo-mini.png',
     nav: nav(),
 
     sidebar: {
       '/zh/guide/': { base: '/zh/guide/', items: sidebarGuide() },
-      '/zh/reference/': { base: '/zh/reference/', items: sidebarReference() }
+      '/zh/reference/': { base: '/zh/reference/', items: sidebarReference() },
+      '/zh/note/vue2': { base: '/zh/note/vue2/', items: sidebarNoteVue2() },
+      '/zh/note/vue3': { base: '/zh/note/vue3/', items: sidebarNoteVue3() }
     },
 
     editLink: {
@@ -64,6 +67,19 @@ function nav(): DefaultTheme.NavItem[] {
       text: '参考',
       link: '/zh/reference/site-config',
       activeMatch: '/zh/reference/'
+    },
+    {
+      text: '笔记',
+      items: [
+        {
+          text: 'vue2笔记',
+          link: '/zh/note/vue2/site-config'
+        }
+        // {
+        //   text: 'vue3笔记',
+        //   link: '/zh/note/vue3/site-config'
+        // }
+      ]
     },
     {
       text: pkg.version,
@@ -131,6 +147,72 @@ function sidebarReference(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: '参考',
+      items: [
+        { text: '站点配置', link: 'site-config' },
+        { text: 'frontmatter 配置', link: 'frontmatter-config' },
+        { text: '运行时 API', link: 'runtime-api' },
+        { text: 'CLI', link: 'cli' },
+        {
+          text: '默认主题',
+          base: '/zh/reference/default-theme-',
+          items: [
+            { text: '概览', link: 'config' },
+            { text: '导航栏', link: 'nav' },
+            { text: '侧边栏', link: 'sidebar' },
+            { text: '主页', link: 'home-page' },
+            { text: '页脚', link: 'footer' },
+            { text: '布局', link: 'layout' },
+            { text: '徽章', link: 'badge' },
+            { text: '团队页', link: 'team-page' },
+            { text: '上下页链接', link: 'prev-next-links' },
+            { text: '编辑链接', link: 'edit-link' },
+            { text: '最后更新时间戳', link: 'last-updated' },
+            { text: '搜索', link: 'search' },
+            { text: 'Carbon Ads', link: 'carbon-ads' }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+function sidebarNoteVue2(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'vue2笔记',
+      items: [
+        { text: '站点配置', link: 'site-config' }
+        // { text: '站点配置', link: 'site-config' },
+        // { text: 'frontmatter 配置', link: 'frontmatter-config' },
+        // { text: '运行时 API', link: 'runtime-api' },
+        // { text: 'CLI', link: 'cli' },
+        // {
+        //   text: '默认主题',
+        //   base: '/zh/reference/default-theme-',
+        //   items: [
+        //     { text: '概览', link: 'config' },
+        //     { text: '导航栏', link: 'nav' },
+        //     { text: '侧边栏', link: 'sidebar' },
+        //     { text: '主页', link: 'home-page' },
+        //     { text: '页脚', link: 'footer' },
+        //     { text: '布局', link: 'layout' },
+        //     { text: '徽章', link: 'badge' },
+        //     { text: '团队页', link: 'team-page' },
+        //     { text: '上下页链接', link: 'prev-next-links' },
+        //     { text: '编辑链接', link: 'edit-link' },
+        //     { text: '最后更新时间戳', link: 'last-updated' },
+        //     { text: '搜索', link: 'search' },
+        //     { text: 'Carbon Ads', link: 'carbon-ads' }
+        //   ]
+        // }
+      ]
+    }
+  ]
+}
+function sidebarNoteVue3(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'vue3',
       items: [
         { text: '站点配置', link: 'site-config' },
         { text: 'frontmatter 配置', link: 'frontmatter-config' },
