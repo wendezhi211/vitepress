@@ -4,6 +4,51 @@ import { defineConfig, type DefaultTheme } from 'vitepress'
 const require = createRequire(import.meta.url)
 const pkg = require('vitepress/package.json')
 
+function sidebarNoteVue2(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'vue2笔记',
+      items: [
+        {
+          text: '基础',
+          items: [
+            { text: 'vue 实例', link: 'vueInstance' },
+            { text: '模板语法', link: 'templateSyntax' },
+            { text: '计算属性和侦听器', link: 'computedPropertyAndWatcher' },
+            { text: 'Class 与 Style 绑定', link: 'class-style-binding' },
+            { text: '条件渲染', link: 'conditional-rendering' },
+            { text: '列表渲染', link: 'listRendering' },
+            { text: 'md 教程', link: 'md_tutorial' }
+          ]
+        }
+        // { text: '站点配置', link: 'site-config' },
+        // { text: 'frontmatter 配置', link: 'frontmatter-config' },
+        // { text: '运行时 API', link: 'runtime-api' },
+        // { text: 'CLI', link: 'cli' },
+        // {
+        //   text: '默认主题',
+        //   base: '/zh/reference/default-theme-',
+        //   items: [
+        //     { text: '概览', link: 'config' },
+        //     { text: '导航栏', link: 'nav' },
+        //     { text: '侧边栏', link: 'sidebar' },
+        //     { text: '主页', link: 'home-page' },
+        //     { text: '页脚', link: 'footer' },
+        //     { text: '布局', link: 'layout' },
+        //     { text: '徽章', link: 'badge' },
+        //     { text: '团队页', link: 'team-page' },
+        //     { text: '上下页链接', link: 'prev-next-links' },
+        //     { text: '编辑链接', link: 'edit-link' },
+        //     { text: '最后更新时间戳', link: 'last-updated' },
+        //     { text: '搜索', link: 'search' },
+        //     { text: 'Carbon Ads', link: 'carbon-ads' }
+        //   ]
+        // }
+      ]
+    }
+  ]
+}
+
 export const zh = defineConfig({
   lang: 'zh-Hans',
   description: '由 Vite 和 Vue 驱动的静态站点生成器',
@@ -15,8 +60,8 @@ export const zh = defineConfig({
     sidebar: {
       '/zh/guide/': { base: '/zh/guide/', items: sidebarGuide() },
       '/zh/reference/': { base: '/zh/reference/', items: sidebarReference() },
-      '/zh/note/vue2': { base: '/zh/note/vue2/', items: sidebarNoteVue2() },
-      '/zh/note/vue3': { base: '/zh/note/vue3/', items: sidebarNoteVue3() }
+      '/zh/note/vue2': { base: '/zh/note/vue2/', items: sidebarNoteVue2() }
+      // '/zh/note/vue3': { base: '/zh/note/vue3/', items: sidebarNoteVue3() }
     },
 
     editLink: {
@@ -73,7 +118,7 @@ function nav(): DefaultTheme.NavItem[] {
       items: [
         {
           text: 'vue2笔记',
-          link: '/zh/note/vue2/site-config'
+          link: '/zh/note/vue2/vueInstance'
         }
         // {
         //   text: 'vue3笔记',
@@ -176,39 +221,6 @@ function sidebarReference(): DefaultTheme.SidebarItem[] {
   ]
 }
 
-function sidebarNoteVue2(): DefaultTheme.SidebarItem[] {
-  return [
-    {
-      text: 'vue2笔记',
-      items: [
-        { text: '站点配置', link: 'site-config' }
-        // { text: '站点配置', link: 'site-config' },
-        // { text: 'frontmatter 配置', link: 'frontmatter-config' },
-        // { text: '运行时 API', link: 'runtime-api' },
-        // { text: 'CLI', link: 'cli' },
-        // {
-        //   text: '默认主题',
-        //   base: '/zh/reference/default-theme-',
-        //   items: [
-        //     { text: '概览', link: 'config' },
-        //     { text: '导航栏', link: 'nav' },
-        //     { text: '侧边栏', link: 'sidebar' },
-        //     { text: '主页', link: 'home-page' },
-        //     { text: '页脚', link: 'footer' },
-        //     { text: '布局', link: 'layout' },
-        //     { text: '徽章', link: 'badge' },
-        //     { text: '团队页', link: 'team-page' },
-        //     { text: '上下页链接', link: 'prev-next-links' },
-        //     { text: '编辑链接', link: 'edit-link' },
-        //     { text: '最后更新时间戳', link: 'last-updated' },
-        //     { text: '搜索', link: 'search' },
-        //     { text: 'Carbon Ads', link: 'carbon-ads' }
-        //   ]
-        // }
-      ]
-    }
-  ]
-}
 function sidebarNoteVue3(): DefaultTheme.SidebarItem[] {
   return [
     {
