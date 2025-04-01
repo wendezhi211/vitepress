@@ -18,6 +18,9 @@ function sidebarNoteVue2(): DefaultTheme.SidebarItem[] {
             { text: 'Class 与 Style 绑定', link: 'class-style-binding' },
             { text: '条件渲染', link: 'conditional-rendering' },
             { text: '列表渲染', link: 'listRendering' },
+            { text: '事件处理', link: 'eventHandler' },
+            { text: '表单输入绑定', link: 'formInputBinding' },
+            { text: '组件基础', link: 'componentBase' },
             { text: 'md 教程', link: 'md_tutorial' }
           ]
         }
