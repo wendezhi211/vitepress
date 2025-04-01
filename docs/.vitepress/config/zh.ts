@@ -20,7 +20,15 @@ function sidebarNoteVue2(): DefaultTheme.SidebarItem[] {
             { text: '列表渲染', link: 'listRendering' },
             { text: '事件处理', link: 'eventHandler' },
             { text: '表单输入绑定', link: 'formInputBinding' },
-            { text: '组件基础', link: 'componentBase' },
+            { text: '组件基础', link: 'componentBase' }
+          ]
+        },
+        {
+          text: '深入了解组件',
+          items: [
+            { text: '组件注册', link: 'componentRegistration' },
+            { text: 'Prop', link: 'Prop' },
+            { text: '自定义事件', link: 'customEvent' },
             { text: 'md 教程', link: 'md_tutorial' }
           ]
         }
