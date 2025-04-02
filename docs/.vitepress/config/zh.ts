@@ -29,6 +29,12 @@ function sidebarNoteVue2(): DefaultTheme.SidebarItem[] {
             { text: '组件注册', link: 'componentRegistration' },
             { text: 'Prop', link: 'Prop' },
             { text: '自定义事件', link: 'customEvent' },
+            { text: '插槽', link: 'slot' },
+            {
+              text: '动态组件 & 异步组件',
+              link: 'dynamic-component-async-component'
+            },
+            { text: '处理边界情况', link: 'handleBoundaryCase' },
             { text: 'md 教程', link: 'md_tutorial' }
           ]
         }
